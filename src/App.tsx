@@ -5,14 +5,15 @@ import {
    Route,
    Navigate,
 } from 'react-router-dom'
+import ExploreFeed from './pages/ExploreFeed'
 import Home from './pages/Home'
-import './App.css'
 
 function App() {
    return (
       <Router>
          <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/explore" element={<ExploreFeed />} />
          </Routes>
       </Router>
    )

@@ -4,16 +4,17 @@ import {
    InputGroup,
    InputRightElement,
    Text,
+   Link,
    Avatar,
    Icon,
    Box,
 } from '@chakra-ui/react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { FaSearch } from 'react-icons/fa'
+import { HiOutlineSquare2Stack } from 'react-icons/hi2'
 
 const Header = () => {
    return (
-      <Flex justify="space-between">
+      <Flex justify="space-between" align="center" p={6}>
          <Box>
             <InputGroup mx={0.5}>
                <Input
@@ -30,20 +31,23 @@ const Header = () => {
                />
                <InputRightElement>
                   <Icon
-                     h="1em"
-                     w="1em"
+                     h="1.2em"
+                     w="1.2em"
                      bg={'inherit'}
                      color="black"
                      fontWeight="400"
                      _hover={{ background: 'inherit' }}
                   >
-                     <FontAwesomeIcon icon={faMagnifyingGlass} />
+                     <FaSearch fontSize="1.5em" />
                   </Icon>
                </InputRightElement>
             </InputGroup>
          </Box>
-         <Flex>
-            <Text>username.io</Text>
+         <Flex align="center" gap={5}>
+            <Flex align="center" gap={1.5}>
+               <Link fontSize="lg">username.io</Link>
+               <HiOutlineSquare2Stack fontSize="20px" />
+            </Flex>
             <Avatar size="sm" name="username.io"></Avatar>
          </Flex>
       </Flex>

@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Weather = () => {
-    return <div>Weather</div>
+const WeatherComponent = () => {
+   return <div>WeatherComponent</div>
 }
 
-export default Weather
+export default WeatherComponent

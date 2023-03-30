@@ -1,32 +1,37 @@
-// 1. Import the extendTheme function
 import '@fontsource/inter'
 import '@fontsource/roboto'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { extendTheme, ChakraProvider } from '@chakra-ui/react'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import App from './App'
 import './index.css'
-import { extendTheme, ChakraProvider } from '@chakra-ui/react'
 
-// 2. Extend the theme to include custom colors, fonts, etc
+//Extend the theme to include custom colors, fonts, etc
 const colors = {
-    brand: {
-        900: '#1a365d',
-        800: '#153e75',
-        700: '#2a69ac',
-    },
+   brand: {
+      900: '#1a365d',
+      800: '#153e75',
+      700: '#2a69ac',
+   },
 }
 const fonts = {
-    heading: `'Roboto', 'Inter', sans-serif`,
-    body: `'Roboto', 'Inter', sans-serif`,
+   heading: `'Roboto', 'Inter', sans-serif`,
+   body: `'Roboto', 'Inter', sans-serif`,
 }
-
 const theme = extendTheme({ colors, fonts })
 
-// 3. Pass the `theme` prop to the `ChakraProvider`
+const queryClient = new QueryClient() //create a new query client
+
+// Pass the `queryClient` prop to the `QueryClientProvider` then pass the `theme` prop to the `ChakraProvider`
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-    <React.StrictMode>
-        <ChakraProvider theme={theme}>
+   <React.StrictMode>
+      <QueryClientProvider client={queryClient}>
+         <ChakraProvider theme={theme}>
             <App />
-        </ChakraProvider>
-    </React.StrictMode>
+         </ChakraProvider>
+         <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+   </React.StrictMode>
 )
