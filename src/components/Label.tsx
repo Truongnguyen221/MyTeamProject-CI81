@@ -1,5 +1,6 @@
 import { Box, Text, Flex, Stack } from '@chakra-ui/react'
-import { BsBookmark, BsBookmarkFill, BsBook, BsBookFill } from 'react-icons/bs'
+import { BsBookmark, BsBook } from 'react-icons/bs'
+import { HiOutlineCog8Tooth, HiOutlinePlusCircle } from 'react-icons/hi2'
 import React from 'react'
 
 const primaryColor = '#119C59'
@@ -9,10 +10,25 @@ const Label = () => {
       <Flex mx={5} my={10} direction="column">
          <Stack spacing={5}>
             <Box>
-               <Text color={primaryColor} fontSize="lg">
-                  MY LABEL
-               </Text>
-               <Stack spacing={1} mt={1.5}>
+               <Flex justify="space-between" align="center">
+                  <Text color={primaryColor} fontSize="lg">
+                     MY LABEL
+                  </Text>
+                  <Box
+                     w="3em"
+                     display="flex"
+                     alignItems="center"
+                     justifyContent="center"
+                     gap={2}
+                  >
+                     <HiOutlinePlusCircle
+                        fontSize="20px"
+                        color={primaryColor}
+                     />
+                     <HiOutlineCog8Tooth fontSize="20px" color={primaryColor} />
+                  </Box>
+               </Flex>
+               <Stack spacing={1} mt={1.5} ml={1}>
                   <Text fontSize="lg">News</Text>
                   <Text fontSize="lg">Digital</Text>
                </Stack>
@@ -41,7 +57,7 @@ const Label = () => {
                <Text color={primaryColor} fontSize="lg">
                   FEEDS
                </Text>
-               <Stack spacing={1} mt={1.5}>
+               <Stack spacing={1} mt={1.5} ml={1}>
                   <Text fontSize="lg">Business</Text>
                   <Text fontSize="lg">Science</Text>
                   <Text fontSize="lg">Technology</Text>

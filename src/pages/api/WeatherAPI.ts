@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
-import { BASE_URL } from './BaseAPI'
+import { BASE_URL } from './baseAPI'
 
 export const WeatherAPIFunc = () => {
    const { data, isLoading, isError } = useQuery({

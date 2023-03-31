@@ -1,7 +1,7 @@
 import React from 'react'
 import SideBar from '../components/SideBar'
 import Header from '../components/Header'
-import Main from '../components/Main'
+import NewsComponent from '../components/News'
 // import NewsComponent from '../components/News'
 // import WeatherComponent from '../components/Weather'
 
@@ -12,7 +12,7 @@ const Home = () => {
             <SideBar />
             <div className="ml-auto w-[calc(100%-280px)]">
                <Header />
-               <Main />
+               <NewsComponent />
             </div>
          </div>
       </div>
