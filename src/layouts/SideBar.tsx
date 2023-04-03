@@ -2,13 +2,15 @@ import React from 'react'
 import { Text, Box, Flex } from '@chakra-ui/react'
 import Label from '../components/Label'
 
+const primaryColor = '#119C59'
+
 const SideBar = () => {
    return (
       <Box position="fixed" bg="gray.200" height="100vh" width="250px" p={2}>
          <Flex direction="column">
             <Flex gap={1} justify="center" mt={4}>
                <Text
-                  color="#119C59"
+                  color={primaryColor}
                   fontFamily="Inter"
                   fontSize="2xl"
                   fontWeight="600"

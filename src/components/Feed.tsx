@@ -22,7 +22,7 @@ const Feed = () => {
                   display="flex"
                   flexDirection="column"
                   alignItems="center"
-                  w="100%"
+                  w="90%"
                   h="220px"
                   bg="transparent"
                   key={idx}

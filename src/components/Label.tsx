@@ -1,4 +1,4 @@
-import { Box, Text, Flex, Stack } from '@chakra-ui/react'
+import { Box, Text, Flex, Stack, Link } from '@chakra-ui/react'
 import { BsBookmark, BsBook } from 'react-icons/bs'
 import { HiOutlineCog8Tooth, HiOutlinePlusCircle } from 'react-icons/hi2'
 import React from 'react'
@@ -54,20 +54,30 @@ const Label = () => {
                </Stack>
             </Box>
             <Box>
-               <Text color={primaryColor} fontSize="lg">
+               <Link
+                  href="/explore"
+                  color={primaryColor}
+                  fontSize="lg"
+                  _hover={{ textDecoration: 'none' }}
+               >
                   FEEDS
-               </Text>
+               </Link>
                <Stack spacing={1} mt={1.5} ml={1}>
-                  <Text>Business</Text>
-                  <Text>Science</Text>
-                  <Text>Technology</Text>
+                  <Link href="/explore/1">Business</Link>
+                  <Link href="/explore/2">Science</Link>
+                  <Link href="/explore/3">Technology</Link>
                   <Text>Show more...</Text>
                </Stack>
             </Box>
             <Box>
-               <Text color={primaryColor} fontSize="lg">
+               <Link
+                  href="/todolist"
+                  color={primaryColor}
+                  fontSize="lg"
+                  _hover={{ textDecoration: 'none' }}
+               >
                   TODO LIST
-               </Text>
+               </Link>
             </Box>
          </Stack>
       </Flex>
