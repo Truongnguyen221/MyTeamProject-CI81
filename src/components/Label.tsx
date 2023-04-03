@@ -29,8 +29,8 @@ const Label = () => {
                   </Box>
                </Flex>
                <Stack spacing={1} mt={1.5} ml={1}>
-                  <Text fontSize="lg">News</Text>
-                  <Text fontSize="lg">Digital</Text>
+                  <Text>News</Text>
+                  <Text>Digital</Text>
                </Stack>
             </Box>
             <Box>
@@ -58,10 +58,10 @@ const Label = () => {
                   FEEDS
                </Text>
                <Stack spacing={1} mt={1.5} ml={1}>
-                  <Text fontSize="lg">Business</Text>
-                  <Text fontSize="lg">Science</Text>
-                  <Text fontSize="lg">Technology</Text>
-                  <Text fontSize="lg">Show more...</Text>
+                  <Text>Business</Text>
+                  <Text>Science</Text>
+                  <Text>Technology</Text>
+                  <Text>Show more...</Text>
                </Stack>
             </Box>
             <Box>

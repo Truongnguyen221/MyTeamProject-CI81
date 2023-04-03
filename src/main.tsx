@@ -17,8 +17,8 @@ const colors = {
    },
 }
 const fonts = {
-   heading: `'Roboto', 'Inter', sans-serif`,
-   body: `'Roboto', 'Inter', sans-serif`,
+   heading: `'Inter', 'Roboto', sans-serif`,
+   body: `'Inter', 'Roboto', sans-serif`,
 }
 const theme = extendTheme({ colors, fonts })
 

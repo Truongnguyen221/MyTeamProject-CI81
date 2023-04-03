@@ -3,7 +3,6 @@ import {
    Input,
    InputGroup,
    InputRightElement,
-   Text,
    Link,
    Avatar,
    Icon,

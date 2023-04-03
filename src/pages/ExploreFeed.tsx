@@ -1,7 +1,7 @@
 import React from 'react'
 import SideBar from '../components/SideBar'
 import Header from '../components/Header'
-import Feed from '../components/Main'
+import Feed from '../components/Feed'
 
 const ExploreFeed = () => {
    return (
